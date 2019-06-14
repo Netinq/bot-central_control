@@ -1,0 +1,15 @@
+{
+  "name": "bot-central_control",
+  "version": "0.1.0",
+  "main": "app.js",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "discord": "npm i --save discord.js"
+  },
+  "author": "Quentin Sar",
+  "license": "ISC",
+  "description": ""
+}
