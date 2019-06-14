@@ -5,7 +5,7 @@ module.exports = (client, Channels) => {
         const channel = Channels.getChannelByName(client.guilds.get('588861283915530281'), 'zone-de-largage');
         
         channel.send(
-            "` ` \n"+
+            "`========== Nouveau Départ ==========` \n"+
             "❗ Et merde...."+"\n"+
             "❗"+member+" à basculé....")
     })
