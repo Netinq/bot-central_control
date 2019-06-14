@@ -10,7 +10,7 @@ exports.help = function(guild, channel, message, author)
         guild.iconURL,
         'développé par Quentin#685 (K-Dev)','',
         '',
-        'http://localhost/assets/images/commandlist.png'
+        'https://raw.githubusercontent.com/TheDEWIQ/bot-central_control/master/assets/images/commandlist.png'
       )
     )
 }
