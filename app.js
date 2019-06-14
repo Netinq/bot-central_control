@@ -11,8 +11,8 @@ const RoleGestion = require('./api/discord/user/RoleGestion')
 const Game = require('./api/discord/user/Game')
 const Embed = require('./api/discord/chat/Embed')
 
-require('./events/GuildJoinEvent')(client, Channels, Embed);
-require('./events/GuildQuitEvent')(client, Channels, Embed);
+require('./events/GuildJoinEvent')(client, Channels, Role, RoleGestion);
+require('./events/GuildQuitEvent')(client, Channels);
 require('./events/command-manager')(client)
 
 const token = require('./token');

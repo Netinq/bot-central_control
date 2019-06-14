@@ -1,4 +1,4 @@
-module.exports = (client, Channels, Embed) => {
+module.exports = (client, Channels) => {
 
     client.on('guildMemberRemove', (member) =>  {
        

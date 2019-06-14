@@ -1,8 +1,8 @@
 let client; exports.init = function (e) {client = e;}
 
-exports.addRole = function(member, e) {
-    member.addRoles(e)
+exports.addRole = function(member, role) {
+    member.addRoles(role)
 };
-exports.removeRole = function(member, e) {
-    member.removeRoles(e)
+exports.removeRole = function(member, role) {
+    member.removeRoles(role)
 };
