@@ -1,11 +1,31 @@
-const cmd_help = [
-    "help",
-    require('./commands/help.js').help,
-    "Commande qui permet d'avoir de l'aide sur la liste des commandes et les descriptions des commandes"
+let cmd_help = 
+[
+    'help',
+    require('./commands/help').help,
+    'Commande qui permet d\'avoir de l\'aide sur la liste des commandes et les descriptions des commandes',
+    0
 ]
-const commands = [
-    cmd_help
+let cmd_attaque =
+[
+    'attaque',
+    '',
+    'Commande qui permet d\'attaquer d\'autres faction',
+    5
 ]
+let commands = 
+[
+    cmd_help,
+    cmd_attaque
+]
+
+exports.getCommands = function() 
+{
+    return commands;
+};
+exports.getCommandsSize = function()
+{
+    return commands.length
+}
 
 module.exports = (client, Channels) => 
 {
@@ -13,13 +33,13 @@ module.exports = (client, Channels) =>
     {
         if (!(message.content.startsWith('/'))) return 
 
-        const command = message.content.replace('/', '')
+        let command = message.content.replace('/', '')
 
-        commands.forEach(function(check_command) 
+        commands.forEach(check_command => 
         {
             if (check_command[0] == command) 
             {
-                const content_message = command.replace(check_command[0], '')
+                let content_message = command.replace(check_command[0], '')
                 check_command[1](message.guild, message.channel, content_message, message.author)
             }
         })

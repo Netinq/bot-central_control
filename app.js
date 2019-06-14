@@ -15,7 +15,7 @@ require('./events/GuildJoinEvent')(client, Channels, Embed);
 require('./events/GuildQuitEvent')(client, Channels, Embed);
 require('./events/command-manager')(client)
 
-var token = require('./token');
+const token = require('./token');
 client.login(token.token);
 
 client.on('ready', () => {
