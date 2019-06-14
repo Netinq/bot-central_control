@@ -11,8 +11,6 @@ const RoleGestion = require('./api/discord/user/RoleGestion')
 const Game = require('./api/discord/user/Game')
 const Embed = require('./api/discord/chat/Embed')
 
-exports.Embed
-
 require('./events/GuildJoinEvent')(client, Channels, Embed);
 require('./events/GuildQuitEvent')(client, Channels, Embed);
 require('./events/command-manager')(client)
@@ -28,6 +26,5 @@ client.on('ready', () => {
     RoleGestion.init(client);
     Game.init(client);
 
-    console.log(`Logged in as ${client.user.tag}!`);
     Game.setListening('Communauté Française');
 })
